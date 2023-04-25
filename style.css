@@ -1,0 +1,137 @@
+/* Add CSS here */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-button: #38335c;
+    --color-box1: #554baa;
+    --color-box2: #eaecf9;
+    --transition: .3s;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body {
+
+    background-color: #eaecf9;
+
+
+}
+
+.card {
+    background-color: #fff;
+    padding: 60px;
+    max-width: 950px;
+    margin: 30px auto;
+
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.grup-boxs {
+
+    width: 100%;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.grup-boxs .box {
+    padding: 24px;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+.grup-boxs .box:hover {
+    transform: scale(1.08);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.grup-boxs .box:nth-child(odd) {
+    background-color: var(--color-box1);
+    color: aliceblue;
+}
+
+.grup-boxs .box:nth-child(even) {
+    background-color: var(--color-box2);
+    color: #38335b;
+}
+
+.grup-boxs .box span {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.grup-boxs .box h1 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.grup-boxs .box p {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 36px;
+    width: 90%;
+}
+
+.grup-boxs .box .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* button */
+.container button {
+    background-color: var(--color-button);
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    color: aliceblue;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.container button:hover a {
+    width: 100%;
+    box-shadow: 0 0 0 362px #554baa;
+    transition: var(--transition);
+    background-color: var(--color-box1);
+
+}
+@media (max-width:750px){
+    .card{
+        height:fit-content;
+        width: 100%;
+        margin: 0;
+    
+    }
+}
+@media (max-width:540px) {
+    .card {
+        height: fit-content;
+        width: 100%;
+        margin: 0;
+        padding: 50px;
+
+    }
+}
